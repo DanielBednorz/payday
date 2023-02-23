@@ -1,0 +1,25 @@
+version: "3.8"
+
+networks:
+
+  local:
+    driver: "bridge"
+
+services:
+
+  fk-ogs_postgres:
+    image: "postgres:15.2"
+    restart: always
+    container_name: "postgres"
+    environment:
+      - "POSTGRES_PASSWORD=payday"
+      - "POSTGRES_USER=payday"
+      - "POSTGRES_DB=payday"
+    ports:
+      - "5432:5432"
+    volumes:
+      - "payday_db:/var/lib/postgresql/data"
+    networks:
+      - "local"
+volumes:
+  payday_db:

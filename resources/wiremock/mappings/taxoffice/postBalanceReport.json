@@ -1,0 +1,14 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "POST",
+    "urlPattern": "/balance-report"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "taxoffice/postBalanceReport_200.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

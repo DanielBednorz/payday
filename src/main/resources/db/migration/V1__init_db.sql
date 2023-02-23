@@ -1,0 +1,6 @@
+CREATE SEQUENCE IF NOT EXISTS seq_balance_id START WITH 1 INCREMENT BY 1 NO CYCLE;
+CREATE TABLE IF NOT EXISTS balance (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('seq_balance_id'),
+    balance BIGINT NOT NULL,
+    already_transferred BIGINT NOT NULL
+);

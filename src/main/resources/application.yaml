@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: payday
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payday
+    username: payday
+    password: payday
+    driver-class-name: org.postgresql.Driver
+
+external:
+  github:
+    baseUrl: https://api.github.com
+    path:
+      repos: /repos/DanielBednorz/payday
+  taxoffice:
+    baseUrl: http://localhost:5555
+    path:
+      balanceReport: /balance-report
+
+server:
+  port: 8888
+
+logging:
+  level:
+    root: INFO
